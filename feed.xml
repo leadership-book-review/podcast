@@ -43,8 +43,8 @@ layout: null
             <description><![CDATA[{{ post.summary | cdata_escape }}]]></description>
 
             {% if post.has_image %}<itunes:image href="https://leadership-book-review.github.io/podcast/episodes/{{ post.slug }}.jpg" />{% endif %}
-            <enclosure url="{{ site.url }}/episodes/ep{{ post.slug }}.mp3" length="{% if post.length %}{{ post.length }}{% else %}{% filesize %}./episodes/ep{{ post.slug }}.mp3{% endfilesize %}{% endif %}" type="audio/mpeg" />
-            <itunes:duration>{% if post.duration %}{{ post.duration }}{% else %}{% audioduration %}./episodes/ep{{ post.slug }}.mp3{% endaudioduration %}{% endif %}</itunes:duration>
+            <enclosure url="{{ site.url }}/episodes/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
+            <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:season>1</itunes:season>
             <itunes:episode>{{ post.slug | xml_escape }}</itunes:episode>
             <itunes:episodeType>full</itunes:episodeType>
