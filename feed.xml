@@ -45,16 +45,16 @@ layout: null
             <description><![CDATA[{{ post.summary | cdata_escape }}]]></description>
 
             <itunes:image href="https://leadership-book-review.github.io/podcast/{% if post.has_image %}episodes/ep{{ post.slug }}.png{% else %}logo-square.png{% endif %}" />
-            <enclosure url="https://dts.podtrac.com/redirect.mp3/leadership-book-review.github.io/episodes/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
+            <enclosure url="https://dts.podtrac.com/redirect.mp3/leadership-book-review.github.io/podcast/episodes/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
             <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:season>1</itunes:season>
             <itunes:episode>{{ post.slug | xml_escape }}</itunes:episode>
             <itunes:episodeType>full</itunes:episodeType>
 
-            <guid isPermaLink="false">{{ site.url }}/episodes/ep{{ post.slug }}.mp3</guid>
+            <guid isPermaLink="false">{{ site.url }}/podcast/episodes/ep{{ post.slug }}.mp3</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %T %z" }}</pubDate>
             <itunes:explicit>{% if post.explicit %}yes{% else %}no{% endif %}</itunes:explicit>
-            <link>{{ site.url }}/episodes/{{ post.slug }}/</link>
+            <link>{{ site.url }}/podcast/episodes/{{ post.slug }}/</link>
         </item>
 	{% endfor %}
     </channel>
