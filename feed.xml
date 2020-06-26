@@ -11,14 +11,16 @@ layout: null
         <title>The Leadership Book Review</title>
         <link>https://leadership-book-review.github.io/podcast/</link>
         <language>en-us</language>
-        <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="{{ site.url }}/podcast/feed.xml" rel="self" type="application/rss+xml" />
         <copyright>Chris Alexander</copyright>
         <itunes:subtitle>Book reviews in the area of leadership and management</itunes:subtitle>
         <itunes:author>Chris Alexander</itunes:author>
         <itunes:summary>Hear about new leadership and management books, or discover new classics.</itunes:summary>
         <itunes:keywords>leadership, management, book, books, review, book review, book reviews</itunes:keywords>
+        <itunes:type>episodic</itunes:type>
         <description>Hear about new leadership and management books, or discover new classics.</description>
         <itunes:block>yes</itunes:block>
+        <itunes:explicit>no</itunes:explicit>
         <itunes:owner>
             <itunes:name>Chris Alexander</itunes:name>
             <itunes:email>lbr-podcast@chris-alexander.co.uk</itunes:email>
@@ -52,6 +54,7 @@ layout: null
             <guid isPermaLink="false">{{ site.url }}/episodes/ep{{ post.slug }}.mp3</guid>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %T %z" }}</pubDate>
             <itunes:explicit>{% if post.explicit %}yes{% else %}no{% endif %}</itunes:explicit>
+            <link>{{ site.url }}/episodes/{{ post.slug }}/</link>
         </item>
 	{% endfor %}
     </channel>
