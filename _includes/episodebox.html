@@ -1,16 +1,20 @@
 <div class="col-md-4">
     <div class="card mb-4 shadow-sm">
         {% if page.has_image %}<img class="bd-placeholder-img card-img-top" width="100%" height="225"
-            src="/podcast/episodes/ep{{ page.slug }}.png" />{% endif %}
+            src="/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.png" />{% endif %}
         <div class="card-body">
-            <small class="card-text text-muted">Episode {{ page.slug }}</small>
+            <small class="card-text text-muted">{{ site.podcast.episode_label }} {{ page.slug }}</small>
             <h4>{{ page.title }}</h4>
-            <p class="card-text">{{ page.summary }}</p>
+            <p class="card-text"><em>{{ page.summary }}</em></p>
+            <p class="card-text">{{ page.description }}</p>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a class="btn btn-sm btn-outline-secondary" href="/podcast/episodes/{{ page.slug }}">Listen</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="/podcast/episodes/{{ page.slug }}">Details</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="/podcast/episodes/ep{{ page.slug }}.mp3">MP3</a>
+                    <a class="btn btn-sm btn-outline-secondary"
+                        href="/{{ site.subdir }}{{ site.podcast.episodes }}/{{ page.slug }}">Listen</a>
+                    <a class="btn btn-sm btn-outline-secondary"
+                        href="/{{ site.subdir }}{{ site.podcast.episodes }}/{{ page.slug }}">Details</a>
+                    <a class="btn btn-sm btn-outline-secondary"
+                        href="/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.mp3">MP3</a>
                 </div>
                 <small class="text-muted">{{ page.duration }}</small>
             </div>

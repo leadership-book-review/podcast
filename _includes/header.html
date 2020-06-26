@@ -4,16 +4,14 @@
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">About</h4>
-                    <p class="text-muted">The Leadership Book Review is a podcast which reviews current and historic
-                        books that explore topics around leadership and management. Find your next leadership book by
-                        listening to The Leadership Book Review.</p>
+                    <p class="text-muted">{{ site.podcast.subtitle }}</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Subscribe</h4>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">Apple Podcasts</a></li>
                         <li><a href="#" class="text-white">Google Podcasts</a></li>
-                        <li><a href="/podcast/feed.xml" class="text-white">XML</a></li>
+                        <li><a href="/{{ site.subdir }}feed.xml" class="text-white">XML</a></li>
                     </ul>
                 </div>
             </div>
@@ -21,9 +19,9 @@
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
-            <a href="/podcast/" class="navbar-brand d-flex align-items-center">
+            <a href="/{{ site.subdir }}" class="navbar-brand d-flex align-items-center">
                 <!-- 20x20 img-->
-                <strong>The Leadership Book Review</strong>
+                <strong>{{ site.podcast.name }}</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

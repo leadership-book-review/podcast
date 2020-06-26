@@ -1,18 +1,15 @@
 ---
 layout: base
-heading: 'The Leadership Book Review - Podcast'
 ---
 
 <section class="jumbotron text-center">
     <div class="container">
-        <h1>The Leadership Book Review</h1>
-        <p class="lead text-muted">If you're looking for a new leadership book to delve in to, or want to hear about how
-            times have changed by hearing about books from the past, The Leadership Book Review is a short and sharp
-            podcast that takes a look at all kinds of leadership and management books.</p>
+        <h1>{{ site.podcast.name }}</h1>
+        <p class="lead text-muted">{{ site.podcast.description }}</p>
         <p>
             <a href="#" class="btn btn-secondary my-2">Apple Podcasts</a>
             <a href="#" class="btn btn-secondary my-2">Google Podcasts</a>
-            <a href="/podcast/feed.xml" class="btn btn-secondary my-2">XML</a>
+            <a href="/{{ site.subdir }}feed.xml" class="btn btn-secondary my-2">XML</a>
         </p>
     </div>
 </section>

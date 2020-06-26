@@ -3,3 +3,24 @@ exclude: [Gemfile, README.md]
 paginate: 100
 paginate_path: "/page/:num/"
 plugins: [jekyll-paginate]
+podcast:
+  name: The Leadership Book Review
+  author: Chris Alexander
+  subtitle: Reviews of leadership and management books
+  description:
+    This podcast is ideal if you're looking for a new leadership book to delve in to, or want to hear about how
+    times have changed by hearing about books from the past. The Leadership Book Review is a short and sharp
+    take on all kinds of leadership and management books.
+  tags: leadership, management, book, books, review, book review, book reviews
+  email: lbr-podcast@chris-alexander.co.uk
+  logo: logo-square.png
+  episodes: episodes
+  episode_label: Episode
+  category1: Business
+  subcategory1: Management
+  category2: Arts
+  subcategory2: Books
+  category3: Business
+  subcategory3: Entrepreneurship
+  ga: UA-474668-18
+subdir: podcast/
