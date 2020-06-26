@@ -1,5 +1,6 @@
 .ionide
 _site
+.jekyll-cache
 
 *.gem
 *.rbc
