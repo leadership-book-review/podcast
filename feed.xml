@@ -44,7 +44,7 @@ layout: null
             <itunes:summary><![CDATA[{{ post.summary | cdata_escape }}]]></itunes:summary>
             <description><![CDATA[{{ post.summary | cdata_escape }}]]></description>
 
-            {% if post.has_image %}<itunes:image href="https://leadership-book-review.github.io/podcast/episodes/{{ post.slug }}.jpg" />{% endif %}
+            <itunes:image href="https://leadership-book-review.github.io/podcast/{% if post.has_image %}episodes/ep{{ post.slug }}.png{% else %}logo-square.png{% endif %}" />
             <enclosure url="https://dts.podtrac.com/redirect.mp3/leadership-book-review.github.io/episodes/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
             <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:season>1</itunes:season>

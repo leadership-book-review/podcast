@@ -3,10 +3,25 @@ layout: base
 heading: 'The Leadership Book Review - Podcast'
 ---
 
-{% include home.html %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>The Leadership Book Review</h1>
+        <p class="lead text-muted">If you're looking for a new leadership book to delve in to, or want to hear about how
+            times have changed by hearing about books from the past, The Leadership Book Review is a short and sharp
+            podcast that takes a look at all kinds of leadership and management books.</p>
+        <p>
+            <a href="#" class="btn btn-secondary my-2">Apple Podcasts</a>
+            <a href="#" class="btn btn-secondary my-2">Google Podcasts</a>
+        </p>
+    </div>
+</section>
 
-{% for page in paginator.posts %}
-{% include episodebox.html %}
-{% endfor %}
-
-{% include footer.html %}
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {% for page in paginator.posts %}
+            {% include episodebox.html %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

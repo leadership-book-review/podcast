@@ -1,7 +1,19 @@
-<div class="list-item list-leader{% if page.leader.inverted %} inverted{% endif %}">
-    {% if page.heading %}<h2><a href="{{ page.url }}">{{ page.heading }}</a></h2>{% endif %}
-    {% if page.subheading %}<p class="subheading"><a href="{{ page.url }}">{{ page.subheading }}</a></p>{% endif %}
-    {% if page.leader.image %}<div class="bgfade leader-image"
-        style="background-image: url({% if page.leader.hassmall == false %}{{ page.leader.image }}{% else %}{{ page.leader.image | replace:'.jpg','small.jpg' }}{% endif %})">
-    </div>{% endif %}
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        {% if page.has_image %}<img class="bd-placeholder-img card-img-top" width="100%" height="225"
+            src="/episodes/ep{{ page.slug }}.png" />{% endif %}
+        <div class="card-body">
+            <small class="card-text text-muted">Episode {{ page.slug }}</small>
+            <h4>{{ page.title }}</h4>
+            <p class="card-text">{{ page.summary }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a class="btn btn-sm btn-outline-secondary" href="/episodes/{{ page.slug }}">Listen</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/episodes/{{ page.slug }}">Details</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/episodes/ep{{ page.slug }}.mp3">MP3</a>
+                </div>
+                <small class="text-muted">{{ page.duration }}</small>
+            </div>
+        </div>
+    </div>
 </div>
