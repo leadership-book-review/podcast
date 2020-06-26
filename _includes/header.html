@@ -9,9 +9,7 @@
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4 class="text-white">Subscribe</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Apple Podcasts</a></li>
-                        <li><a href="#" class="text-white">Google Podcasts</a></li>
-                        <li><a href="/{{ site.subdir }}feed.xml" class="text-white">XML</a></li>
+                        {% include podlinks.html list=true %}
                     </ul>
                 </div>
             </div>
