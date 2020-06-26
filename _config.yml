@@ -1,1 +1,2 @@
+permalink: /episodes/:slug/
 exclude: [Gemfile, README.md]

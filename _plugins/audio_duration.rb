@@ -1,3 +1,5 @@
+require 'audioinfo'
+
 module Jekyll
   class AudioDurationBlock < Liquid::Block
 
