@@ -1,0 +1,12 @@
+---
+layout: base
+heading: 'The Leadership Book Review - Podcast'
+---
+
+{% include home.html %}
+
+{% for page in paginator.posts %}
+{% include episodebox.html %}
+{% endfor %}
+
+{% include footer.html %}

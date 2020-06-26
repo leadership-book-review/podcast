@@ -1,0 +1,7 @@
+<div class="list-item list-leader{% if page.leader.inverted %} inverted{% endif %}">
+    {% if page.heading %}<h2><a href="{{ page.url }}">{{ page.heading }}</a></h2>{% endif %}
+    {% if page.subheading %}<p class="subheading"><a href="{{ page.url }}">{{ page.subheading }}</a></p>{% endif %}
+    {% if page.leader.image %}<div class="bgfade leader-image"
+        style="background-image: url({% if page.leader.hassmall == false %}{{ page.leader.image }}{% else %}{{ page.leader.image | replace:'.jpg','small.jpg' }}{% endif %})">
+    </div>{% endif %}
+</div>
