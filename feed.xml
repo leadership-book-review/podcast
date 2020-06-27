@@ -44,7 +44,7 @@ layout: null
             <itunes:summary><![CDATA[{{ post.description | cdata_escape }}]]></itunes:summary>
             <description><![CDATA[{{ post.description | cdata_escape }}]]></description>
 
-            <itunes:image href="{{ site.url }}/{{ site.subdir }}{% if post.has_image %}episodes/ep{{ post.slug }}.png{% else %}logo-square.png{% endif %}" />
+            <itunes:image href="{{ site.url }}/{{ site.subdir }}{% if post.has_image %}episodes/ep{{ post.slug }}.png{% else %}{{ site.podcast.logo }}{% endif %}" />
             <enclosure url="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
             <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:season>1</itunes:season>
