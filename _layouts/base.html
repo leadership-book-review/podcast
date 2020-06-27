@@ -9,26 +9,12 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.podcast.name }} - Podcast</title>
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
         .jumbotron {
             padding-top: 3rem;
             padding-bottom: 3rem;
             margin-bottom: 0;
             background-color: #fff;
+            border-radius: 0;
         }
 
         @media (min-width: 768px) {
@@ -44,10 +30,15 @@
 
         .jumbotron h1 {
             font-weight: 300;
+            color: #fff;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
         }
 
         .jumbotron .container {
             max-width: 40rem;
+            color: #ccc !important;
+            text-shadow: -0.5px -0.5px 0 rgba(100, 100, 100, 0.5), 0.5px -0.5px 0 rgba(100, 100, 100, 0.5), -0.5px 0.5px 0 rgba(100, 100, 100, 0.5),
+                0.5px 0.5px 0 rgba(100, 100, 100, 0.5);
         }
 
         footer {
@@ -57,6 +48,12 @@
 
         footer p {
             margin-bottom: .25rem;
+        }
+
+        .jumbo-bg {
+            background-image: url("{{ site.url }}/{{ site.subdir }}bg.png");
+            background-position: top left;
+            background-size: cover;
         }
     </style>
 </head>
