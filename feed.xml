@@ -43,6 +43,7 @@ layout: null
             <itunes:subtitle>{{ post.summary | xml_escape }}</itunes:subtitle>
             <itunes:summary><![CDATA[{{ post.description | cdata_escape }}]]></itunes:summary>
             <description><![CDATA[{{ post.description | cdata_escape }}]]></description>
+            <content:encoded><![CDATA[{{ post.description | cdata_escape }}{% if post.book %}<br /><br /><a href="{{ post.book.link }}">{{ post.book.title }} by {{ post.book.author }} on Amazon</a>{% endif %}<br /><br /><a href="{{ site.url }}/{{ site.subdir | xml_escape }}{{ site.podcast.episodes | xml_escape }}/{{ post.slug }}/">{{ site.podcast.episode_label }} notes</a>]]></content:encoded>
 
             <itunes:image href="{{ site.url }}/{{ site.subdir }}{% if post.has_image %}episodes/ep{{ post.slug }}.png{% else %}{{ site.podcast.logo }}{% endif %}" />
             <enclosure url="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ post.slug }}.mp3" length="{{ post.length }}" type="audio/mpeg" />

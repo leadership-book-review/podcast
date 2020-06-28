@@ -19,8 +19,14 @@ layout: base
                         <audio controls
                             src="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.mp3"></audio>
                         <a class="btn btn-sm btn-outline-secondary"
-                            href="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.mp3">MP3</a>
+                            href="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.mp3">Download
+                            MP3</a>
                     </div>
+                    {% if page.book %}
+                    <h5 style="margin-top: 20px;">Get this book</h5>
+                    <p class="card-text"><a href="{{ page.book.link }}">{{ page.book.title }} by {{ page.book.author }}
+                            on Amazon</a></p>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-md-6">

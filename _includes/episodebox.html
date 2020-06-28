@@ -6,7 +6,8 @@
         {% endif %}
         <div class="card-body">
             <small class="card-text text-muted">{{ site.podcast.episode_label }} {{ page.slug }}</small>
-            <h4>{{ page.title }}</h4>
+            <h4><a class="invisible-link"
+                    href="/{{ site.subdir }}{{ site.podcast.episodes }}/{{ page.slug }}">{{ page.title }}</a></h4>
             <p class="card-text">{{ page.summary }}</p>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -16,6 +17,9 @@
                         href="/{{ site.subdir }}{{ site.podcast.episodes }}/{{ page.slug }}">Details</a>
                     <a class="btn btn-sm btn-outline-secondary"
                         href="https://dts.podtrac.com/redirect.mp3/{{ site.podcast.domain }}/{{ site.subdir }}{{ site.podcast.episodes }}/ep{{ page.slug }}.mp3">MP3</a>
+                    {% if page.book %}
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ page.book.link }}">Book</a>
+                    {% endif %}
                 </div>
                 <small class="text-muted">{{ page.duration }}</small>
             </div>
