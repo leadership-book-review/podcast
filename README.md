@@ -12,6 +12,8 @@ Some useful podcast producer links
 - [iTunes Partner Podcasts](https://itunespartner.apple.com/podcasts/)
 - [Spotify podcast FAQ](https://podcasters.spotify.com/faq)
 
+Submission / management portals:
+
 - [Google Podcasts Manager](https://podcastsmanager.google.com)
 - [Spotify Podcast Manager](https://podcasters.spotify.com/catalog)
 - [Apple Podcast Manager](https://podcastsconnect.apple.com/my-podcasts)
