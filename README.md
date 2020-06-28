@@ -11,6 +11,7 @@ Some useful podcast producer links
 - [Where to submit your podcast](https://lime.link/blog/where-to-submit-your-podcast/)
 - [iTunes Partner Podcasts](https://itunespartner.apple.com/podcasts/)
 - [Spotify podcast FAQ](https://podcasters.spotify.com/faq)
+- [Feed validator](https://castfeedvalidator.com/)
 
 Submission / management portals:
 
