@@ -19,7 +19,7 @@ layout: null
         <itunes:keywords>{{ site.podcast.tags | xml_escape }}</itunes:keywords>
         <itunes:type>episodic</itunes:type>
         <description>{{ site.podcast.description | xml_escape }}</description>
-        <itunes:block>yes</itunes:block>
+        <itunes:block>no</itunes:block>
         <itunes:explicit>no</itunes:explicit>
         <itunes:owner>
             <itunes:name>{{ site.podcast.author | xml_escape }}</itunes:name>
