@@ -1,6 +1,14 @@
+{% if site.podcast.spotify %}
 {% if include.list %}<li>{% endif %}<a href="https://open.spotify.com/show/{{ site.podcast.spotify }}"
-        style="margin-right: 5px"><img src="/{{ site.subdir }}spotify.png" height="38"></a>{% if include.list %}
-</li>
+                style="margin-right: 10px"><img src="/{{ site.subdir }}spotify.png"
+                        height="38"></a>{% if include.list %}
+</li>{% endif %}
+{% endif %}
+{% if site.podcast.google %}
+{% if include.list %}<li style="margin-top: 8px">{% endif %}<a
+                href="https://www.google.com/podcasts?feed={{ site.podcast.google }}" style="margin-right: 10px"><img
+                        src="/{{ site.subdir }}google.png" height="38"></a>{% if include.list %}
+</li>{% endif %}
 {% endif %}
 {% if include.list %}<li>{% endif %}<a href="/{{ site.subdir }}feed.xml"
-        class="btn btn-secondary my-2">RSS</a>{% if include.list %}</li>{% endif %}
+                class="btn btn-secondary my-2">RSS</a>{% if include.list %}</li>{% endif %}
