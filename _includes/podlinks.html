@@ -1,3 +1,8 @@
+{% if site.podcast.apple %}
+{% if include.list %}<li>{% endif %}<a href="{{ site.podcast.apple }}"
+                style="margin-right: 10px"><img src="/{{ site.subdir }}apple.png"
+                        height="38"></a>{% if include.list %}
+</li>{% endif %}
 {% if site.podcast.spotify %}
 {% if include.list %}<li>{% endif %}<a href="https://open.spotify.com/show/{{ site.podcast.spotify }}"
                 style="margin-right: 10px"><img src="/{{ site.subdir }}spotify.png"
