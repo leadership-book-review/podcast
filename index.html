@@ -9,6 +9,10 @@ layout: base
         <p>
             {% include podlinks.html %}
         </p>
+        {% if site.podcast.email %}
+        <p><a href="mailto:{{ site.podcast.email }}">Feedback and comments welcome!</a></p>
+        {% endif %}
+        <p></p>
     </div>
 </section>
 
